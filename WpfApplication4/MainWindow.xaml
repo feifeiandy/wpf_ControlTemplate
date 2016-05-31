@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApplication4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/WpfApplication4;component/Dictionary1.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <WrapPanel Height="30">
+            <!--此处注意 属性Template的类型是ControlTemplate-->
+            <TextBox Height="30" Width="150" Template="{StaticResource ResourceKey=bt}" Foreground="Red" VerticalContentAlignment="Center" HorizontalAlignment="Center">1111
+            </TextBox>
+
+            <!--此处注意 属性ContentTemplate的类型是DataTemplate-->
+            <!--<Button ContentTemplate=""></Button>-->
+        </WrapPanel>
+    </Grid>
+</Window>
